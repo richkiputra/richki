@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"></script>
+</head>
+<body>
+  <div id="demo"></div>
+  
+  <script>
+var kota =['Jakarta', 'Aceh', 'Malang', 'Medan', 'Bontang', 'Jogja', 'Jakarta', 'Bandung', 'Malang', 'Solo', 'Palembang', 'Bandung']
+;
+
+filtered = [];
+kota.filter((nama) => {
+	console.log(nama);
+	console.log(filtered.includes(nama));
+	if (!filtered.includes(nama)){
+		filtered.push(nama);
+	}
+})
+console.log(filtered);
+document.write(filtered);
+</script>
+</body>
+</html>
