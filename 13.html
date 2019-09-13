@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"> </script>
+
+
+</head>
+<body>
+	<script>
+		const fruits = [
+	  {name: 'Pepaya', price: 3000},
+	  {name: 'Jagung', price: 2000},
+	  {name: 'Mengkudu', price: 4000},
+	  {name: 'Kiwi', price: 6000},
+	]
+	result = '';
+	fruits.reduce((val, item) => {
+		result = result + item.name + ': ' + item.price + '\n';
+	}, fruits);
+	
+	document.write(result);
+</script>
+	</body>
+
+</html>
