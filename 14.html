@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"></script>
+
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+var ages = [
+  { id: 1, name: 'Udin', age: 12 },
+  { id: 1, name: 'Wati', age: 51 },
+  { id: 1, name: 'Budi', age: 34 },
+  { id: 1, name: 'Agus', age: 16 },
+  { id: 1, name: 'Sari', age: 19 },
+  { id: 1, name: 'Ririn', age: 21 },
+];
+
+function checkAdult(age) {
+  return age.age < 21;
+}
+
+function myFunction() {
+	document.getElementById("demo").innerHTML = JSON.stringify(ages.filter(checkAdult));
+}
+myFunction();
+</script>
+	</body>
+
+</html>
