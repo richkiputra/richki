@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"></script>
+</head>
+<body>
+  <div id="demo"></div>
+  
+  <script>
+	var total = 0;
+	function myFunction() {
+		var input = prompt("Masukkan angka");
+		if (input !== '=') {
+			if (isNaN(input)) {
+				alert('salah');
+				input = 0;
+			}
+			total = total + +input;
+			myFunction();
+		}
+		document.getElementById("demo").innerHTML =
+			"Total: " + total;
+	}
+	myFunction()
+</script>
+</body>
+</html>

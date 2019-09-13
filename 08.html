@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"></script>
+
+
+</head>
+<body>
+  <div id="demo"></div>
+  <!-- Scripts -->
+  <script>
+	var html = '';
+	var genap = false;
+	var kelipatan5 = false;
+	var kelipatan100 = false;
+
+	for (var i = 1; i <= 1000; i++) {
+		genap = i % 2 === 0;
+		kelipatan5 = i % 5 === 0;
+		kelipatan100 = i % 100 === 0;
+
+		if (genap && !kelipatan100 && !kelipatan5) {
+				html = html + `${i}. Genap<br>`
+		} else if (!genap && !kelipatan5) {
+				html = html + `${i}. Ganjil<br>`
+		} else if (genap && kelipatan5 && !kelipatan100) {
+				html = html + `${i}. Genap Kelipatan Lima<br>`
+		} else if (!genap && kelipatan5) {
+				html = html + `${i}. Ganjil Kelipatan Lima<br>`
+		} else if (kelipatan100) {
+			html = html + `${i}. Kelipatan Seratus<br>`
+		}
+	}
+  document.getElementById("demo").innerHTML = html;
+</script>
+</body>
+
+
+</html>
